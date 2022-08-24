@@ -26,13 +26,16 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mywidget.cpp
+        mywidget.cpp \
+    registerdialog.cpp
 
 HEADERS += \
-        mywidget.h
+        mywidget.h \
+    registerdialog.h
 
 FORMS += \
-        mywidget.ui
+        mywidget.ui \
+    registerdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

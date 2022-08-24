@@ -5,12 +5,23 @@
 MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
 {
     ui->setupUi(this);
+
+    //引入自定义的组件,3    初始化成员属性
+    rd = new RegisterDialog();
+//    Qt实现了一个对象树机制，   每个Qt的对象可以指定父对象， 最终构成以QObject为根的对象树，对象销毁时自动调用直系父和子的析构函数，确保内存正确回收
+//     rd->setParent(this); //析构函数中可以不用手工delete
+    rd->setGeometry(200,200,200,100);
+    //引入自定义的组件,4    展示自定义组件
+    rd->show();//show展现组件
+//     int ret = rd->exec();//开启事件监听，并且获取到返回内容，阻塞模式
+//     qDebug() << "ret:" << ret;
+
     //构造函数
     //因为采用了独立的ui界面文件，  修改ui文件后需运行才可以获得对应组件变量
     //所有在ui中添加的组件都被封装在  ui  这个指针变量中
 
-    ui->myBtn->setText("注册新用户");
-    ui->myBtn->setGeometry(200,200,100,100);
+//    ui->myBtn->setText("注册新用户");
+//    ui->myBtn->setGeometry(200,200,100,100);
 
 
     //建议在构造函数中初始化成员
@@ -39,6 +50,8 @@ MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
 MyWidget::~MyWidget()
 {
     delete ui;
+    //引入自定义的组件,5    析构函数中正确的释放内存
+    delete rd;
 }
 
 //init初始化函数的定义
@@ -59,7 +72,7 @@ void MyWidget::init()
     QStringList playList;
     playList.append(tr("人间"));
     playList.append(tr("爱"));
-    playList << "伤心太平洋" << "达拉崩吧";
+    playList << "伤心太平洋" << "达拉崩吧";   //语法糖
 
     QList<qint32> newList;//通过泛型， 可以设置容器容纳指定的数据类型
     newList << 1  << 88;

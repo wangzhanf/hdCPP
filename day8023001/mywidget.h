@@ -9,6 +9,9 @@
 #include <QList>
 #include <QStringList>
 
+//引入自定义的组件,1 包含对应的声明头
+#include "registerdialog.h"
+
 namespace Ui {
 class MyWidget;
 }
@@ -26,6 +29,9 @@ private:
     Ui::MyWidget *ui;
     QPushButton *regBtn = nullptr;//声明一个堆对象【成员属性】
     void init();//声明一个初始化函数
+
+    //引入自定义的组件,2    声明一个成员属性
+    RegisterDialog *rd = nullptr;
 };
 
 #endif // MYWIDGET_H
