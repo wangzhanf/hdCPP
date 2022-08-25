@@ -27,17 +27,23 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mywidget.cpp \
-    registerdialog.cpp
+    registerdialog.cpp \
+    mymainwindow.cpp
 
 HEADERS += \
         mywidget.h \
-    registerdialog.h
+    registerdialog.h \
+    mymainwindow.h
 
 FORMS += \
         mywidget.ui \
-    registerdialog.ui
+    registerdialog.ui \
+    mymainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc

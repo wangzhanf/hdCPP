@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QList>
 #include <QStringList>
+#include "mymainwindow.h"
 
 //引入自定义的组件,1 包含对应的声明头
 #include "registerdialog.h"
@@ -25,8 +26,12 @@ public:
     explicit MyWidget(QWidget *parent = nullptr);
     ~MyWidget();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::MyWidget *ui;
+    MyMainWindow *mmw = nullptr;
     QPushButton *regBtn = nullptr;//声明一个堆对象【成员属性】
     void init();//声明一个初始化函数
 

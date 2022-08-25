@@ -5,12 +5,15 @@
 MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
 {
     ui->setupUi(this);
+    mmw = new MyMainWindow();
+
+    this->setGeometry(0,0,800,800);
 
     //引入自定义的组件,3    初始化成员属性
     rd = new RegisterDialog();
 //    Qt实现了一个对象树机制，   每个Qt的对象可以指定父对象， 最终构成以QObject为根的对象树，对象销毁时自动调用直系父和子的析构函数，确保内存正确回收
-//     rd->setParent(this); //析构函数中可以不用手工delete
-    rd->setGeometry(200,200,200,100);
+     rd->setParent(this); //析构函数中可以不用手工delete
+    rd->setGeometry(200,200,400,400);
     //引入自定义的组件,4    展示自定义组件
     rd->show();//show展现组件
 //     int ret = rd->exec();//开启事件监听，并且获取到返回内容，阻塞模式
@@ -25,10 +28,17 @@ MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
 
 
     //建议在构造函数中初始化成员
-    regBtn = new QPushButton(this);//养成习惯，组件基本上都属于其他组件，可以自动析构回收内存，一般父组件就是当前组件
-//    regBtn->setParent(this);//亦可
-    regBtn->setText("注册");
-    regBtn->show();
+//    regBtn = new QPushButton(this);//养成习惯，组件基本上都属于其他组件，可以自动析构回收内存，一般父组件就是当前组件
+////    regBtn->setParent(this);//亦可
+//    regBtn->setText("注册");
+//    regBtn->show();
+
+
+//    20220825信号和槽的应用
+    connect(ui->regBtn,&QPushButton::clicked,rd,&RegisterDialog::mySlot);
+
+
+
 
     //数据类型
 //    int x;
@@ -45,6 +55,18 @@ MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
     //调用初始化函数
     init();
 
+
+
+    //布局管理器的代码实现
+    QHBoxLayout *qbl1 = new QHBoxLayout(this);
+    qbl1->setStretch(0,3);
+    qbl1->setStretch(1,5);
+
+    QPushButton *btn1 = new QPushButton(this);
+    QLabel *ql1 = new QLabel("haha");
+
+    qbl1->addWidget(btn1,0);
+    qbl1->addWidget(ql1,1);
 }
 
 MyWidget::~MyWidget()
@@ -76,4 +98,9 @@ void MyWidget::init()
 
     QList<qint32> newList;//通过泛型， 可以设置容器容纳指定的数据类型
     newList << 1  << 88;
+}
+
+void MyWidget::on_pushButton_clicked()
+{
+    mmw->show();
 }

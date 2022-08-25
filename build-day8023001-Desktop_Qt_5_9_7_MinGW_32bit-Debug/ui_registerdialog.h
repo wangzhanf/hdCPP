@@ -45,10 +45,16 @@ public:
         label->setGeometry(QRect(20, 150, 81, 18));
         spinBox = new QSpinBox(RegisterDialog);
         spinBox->setObjectName(QStringLiteral("spinBox"));
-        spinBox->setGeometry(QRect(130, 150, 49, 25));
+        spinBox->setGeometry(QRect(130, 140, 49, 25));
+        QFont font;
+        font.setFamily(QStringLiteral("Arial Black"));
+        font.setPointSize(17);
+        font.setBold(true);
+        font.setWeight(75);
+        spinBox->setFont(font);
         horizontalSlider = new QSlider(RegisterDialog);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(110, 190, 160, 22));
+        horizontalSlider->setGeometry(QRect(120, 210, 191, 22));
         horizontalSlider->setOrientation(Qt::Horizontal);
 
         retranslateUi(RegisterDialog);
