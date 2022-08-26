@@ -10,6 +10,7 @@
 #include <QStringList>
 #include "mymainwindow.h"
 #include "dbdemo.h"
+#include "multabdemo.h"
 
 //引入自定义的组件,1 包含对应的声明头
 #include "registerdialog.h"
@@ -30,7 +31,7 @@ public:
 private slots:
     void on_pushButton_clicked();
     void on_dbBtn_clicked();
-
+    void on_tabBtn_clicked();
 private:
     Ui::MyWidget *ui;
     MyMainWindow *mmw = nullptr;
@@ -40,6 +41,7 @@ private:
     //引入自定义的组件,2    声明一个成员属性
     RegisterDialog *rd = nullptr;
     DBDemo *dbd = nullptr;
+    MulTabDemo *mtd = nullptr;
 };
 
 #endif // MYWIDGET_H

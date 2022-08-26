@@ -39,6 +39,7 @@ public:
     QPushButton *regBtn;
     QPushButton *pushButton;
     QPushButton *dbBtn;
+    QPushButton *tabBtn;
 
     void setupUi(QWidget *MyWidget)
     {
@@ -124,6 +125,9 @@ public:
         dbBtn = new QPushButton(MyWidget);
         dbBtn->setObjectName(QStringLiteral("dbBtn"));
         dbBtn->setGeometry(QRect(20, 520, 99, 28));
+        tabBtn = new QPushButton(MyWidget);
+        tabBtn->setObjectName(QStringLiteral("tabBtn"));
+        tabBtn->setGeometry(QRect(20, 700, 161, 28));
 
         retranslateUi(MyWidget);
 
@@ -139,6 +143,7 @@ public:
         regBtn->setText(QApplication::translate("MyWidget", "\346\263\250\345\206\214\346\214\211\351\222\256", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MyWidget", "\346\211\223\345\274\200\346\226\260\347\252\227\345\217\243", Q_NULLPTR));
         dbBtn->setText(QApplication::translate("MyWidget", "\346\225\260\346\215\256\345\272\223\346\274\224\347\244\272", Q_NULLPTR));
+        tabBtn->setText(QApplication::translate("MyWidget", "\345\244\232tab\345\210\207\346\215\242\346\274\224\347\244\272", Q_NULLPTR));
     } // retranslateUi
 
 };

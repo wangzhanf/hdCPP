@@ -4,9 +4,11 @@ INPUT(
 ./debug\registerdialog.o
 ./debug\mymainwindow.o
 ./debug\dbdemo.o
+./debug\multabdemo.o
 ./debug\qrc_res.o
 ./debug\moc_mywidget.o
 ./debug\moc_registerdialog.o
 ./debug\moc_mymainwindow.o
 ./debug\moc_dbdemo.o
+./debug\moc_multabdemo.o
 );

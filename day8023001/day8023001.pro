@@ -29,19 +29,22 @@ SOURCES += \
         mywidget.cpp \
     registerdialog.cpp \
     mymainwindow.cpp \
-    dbdemo.cpp
+    dbdemo.cpp \
+    multabdemo.cpp
 
 HEADERS += \
         mywidget.h \
     registerdialog.h \
     mymainwindow.h \
-    dbdemo.h
+    dbdemo.h \
+    multabdemo.h
 
 FORMS += \
         mywidget.ui \
     registerdialog.ui \
     mymainwindow.ui \
-    dbdemo.ui
+    dbdemo.ui \
+    multabdemo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

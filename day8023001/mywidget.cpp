@@ -7,6 +7,7 @@ MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
     ui->setupUi(this);
     mmw = new MyMainWindow();
     dbd = new DBDemo();
+    mtd = new MulTabDemo();
 
 //    this->setGeometry(50,50,800,800);
 
@@ -109,4 +110,9 @@ void MyWidget::on_pushButton_clicked()
 void MyWidget::on_dbBtn_clicked()
 {
     dbd->show();
+}
+
+void MyWidget::on_tabBtn_clicked()
+{
+    mtd->show();
 }
