@@ -38,15 +38,32 @@ public:
     QPushButton *loginBtn;
     QPushButton *regBtn;
     QPushButton *pushButton;
+    QPushButton *dbBtn;
 
     void setupUi(QWidget *MyWidget)
     {
         if (MyWidget->objectName().isEmpty())
             MyWidget->setObjectName(QStringLiteral("MyWidget"));
-        MyWidget->resize(627, 460);
+        MyWidget->resize(1039, 864);
+        MyWidget->setStyleSheet(QLatin1String("QLabel{\n"
+"	\n"
+"	color: rgb(255, 5, 17);\n"
+"	\n"
+"	font: 75 24pt \"Adobe Devanagari\";\n"
+"}\n"
+"\n"
+"#labelUpass{\n"
+"\n"
+"	text-decoration: underline;\n"
+"	background-color: rgb(0, 170, 0);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+""));
         layoutWidget = new QWidget(MyWidget);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(100, 90, 361, 101));
+        layoutWidget->setGeometry(QRect(100, 90, 361, 158));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -104,6 +121,9 @@ public:
         pushButton = new QPushButton(MyWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(20, 410, 99, 28));
+        dbBtn = new QPushButton(MyWidget);
+        dbBtn->setObjectName(QStringLiteral("dbBtn"));
+        dbBtn->setGeometry(QRect(20, 520, 99, 28));
 
         retranslateUi(MyWidget);
 
@@ -118,6 +138,7 @@ public:
         loginBtn->setText(QApplication::translate("MyWidget", "\347\231\273\345\275\225", Q_NULLPTR));
         regBtn->setText(QApplication::translate("MyWidget", "\346\263\250\345\206\214\346\214\211\351\222\256", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MyWidget", "\346\211\223\345\274\200\346\226\260\347\252\227\345\217\243", Q_NULLPTR));
+        dbBtn->setText(QApplication::translate("MyWidget", "\346\225\260\346\215\256\345\272\223\346\274\224\347\244\272", Q_NULLPTR));
     } // retranslateUi
 
 };

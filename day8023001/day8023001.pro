@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,17 +28,20 @@ SOURCES += \
         main.cpp \
         mywidget.cpp \
     registerdialog.cpp \
-    mymainwindow.cpp
+    mymainwindow.cpp \
+    dbdemo.cpp
 
 HEADERS += \
         mywidget.h \
     registerdialog.h \
-    mymainwindow.h
+    mymainwindow.h \
+    dbdemo.h
 
 FORMS += \
         mywidget.ui \
     registerdialog.ui \
-    mymainwindow.ui
+    mymainwindow.ui \
+    dbdemo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

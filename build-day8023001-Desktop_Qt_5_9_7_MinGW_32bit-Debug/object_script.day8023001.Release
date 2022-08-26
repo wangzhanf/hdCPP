@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mywidget.o
+./release\registerdialog.o
+./release\mymainwindow.o
+./release\dbdemo.o
+./release\qrc_res.o
+./release\moc_mywidget.o
+./release\moc_registerdialog.o
+./release\moc_mymainwindow.o
+./release\moc_dbdemo.o
+);

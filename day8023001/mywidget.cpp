@@ -6,16 +6,17 @@ MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
 {
     ui->setupUi(this);
     mmw = new MyMainWindow();
+    dbd = new DBDemo();
 
-    this->setGeometry(0,0,800,800);
+//    this->setGeometry(50,50,800,800);
 
     //引入自定义的组件,3    初始化成员属性
     rd = new RegisterDialog();
 //    Qt实现了一个对象树机制，   每个Qt的对象可以指定父对象， 最终构成以QObject为根的对象树，对象销毁时自动调用直系父和子的析构函数，确保内存正确回收
-     rd->setParent(this); //析构函数中可以不用手工delete
-    rd->setGeometry(200,200,400,400);
+//     rd->setParent(this); //析构函数中可以不用手工delete
+//    rd->setGeometry(200,200,200,200);
     //引入自定义的组件,4    展示自定义组件
-    rd->show();//show展现组件
+//    rd->show();//show展现组件
 //     int ret = rd->exec();//开启事件监听，并且获取到返回内容，阻塞模式
 //     qDebug() << "ret:" << ret;
 
@@ -103,4 +104,9 @@ void MyWidget::init()
 void MyWidget::on_pushButton_clicked()
 {
     mmw->show();
+}
+
+void MyWidget::on_dbBtn_clicked()
+{
+    dbd->show();
 }

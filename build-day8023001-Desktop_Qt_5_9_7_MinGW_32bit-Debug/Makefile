@@ -237,6 +237,7 @@ Makefile: ../day8023001/day8023001.pro ../../../myfloder/develop-tools/Qt/Qt5.9.
 		../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/qtmaind.prl \
 		../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Widgets.prl \
 		../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Gui.prl \
+		../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Sql.prl \
 		../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ..\day8023001\day8023001.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/mkspecs/features/spec_pre.prf:
@@ -415,6 +416,7 @@ Makefile: ../day8023001/day8023001.pro ../../../myfloder/develop-tools/Qt/Qt5.9.
 ../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/qtmaind.prl:
 ../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Widgets.prl:
 ../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Gui.prl:
+../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Sql.prl:
 ../../../myfloder/develop-tools/Qt/Qt5.9.7/5.9.7/mingw53_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\day8023001\day8023001.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

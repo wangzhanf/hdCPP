@@ -9,6 +9,7 @@
 #include <QList>
 #include <QStringList>
 #include "mymainwindow.h"
+#include "dbdemo.h"
 
 //引入自定义的组件,1 包含对应的声明头
 #include "registerdialog.h"
@@ -28,6 +29,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void on_dbBtn_clicked();
 
 private:
     Ui::MyWidget *ui;
@@ -37,6 +39,7 @@ private:
 
     //引入自定义的组件,2    声明一个成员属性
     RegisterDialog *rd = nullptr;
+    DBDemo *dbd = nullptr;
 };
 
 #endif // MYWIDGET_H
