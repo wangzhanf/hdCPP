@@ -17,7 +17,7 @@ MyWidget::MyWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MyWidget)
 //     rd->setParent(this); //析构函数中可以不用手工delete
 //    rd->setGeometry(200,200,200,200);
     //引入自定义的组件,4    展示自定义组件
-//    rd->show();//show展现组件
+    rd->show();//show展现组件
 //     int ret = rd->exec();//开启事件监听，并且获取到返回内容，阻塞模式
 //     qDebug() << "ret:" << ret;
 

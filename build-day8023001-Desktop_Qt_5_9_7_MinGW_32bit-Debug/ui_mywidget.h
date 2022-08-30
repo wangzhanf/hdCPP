@@ -46,22 +46,7 @@ public:
         if (MyWidget->objectName().isEmpty())
             MyWidget->setObjectName(QStringLiteral("MyWidget"));
         MyWidget->resize(1039, 864);
-        MyWidget->setStyleSheet(QLatin1String("QLabel{\n"
-"	\n"
-"	color: rgb(255, 5, 17);\n"
-"	\n"
-"	font: 75 24pt \"Adobe Devanagari\";\n"
-"}\n"
-"\n"
-"#labelUpass{\n"
-"\n"
-"	text-decoration: underline;\n"
-"	background-color: rgb(0, 170, 0);\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-""));
+        MyWidget->setStyleSheet(QStringLiteral(""));
         layoutWidget = new QWidget(MyWidget);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
         layoutWidget->setGeometry(QRect(100, 90, 361, 158));

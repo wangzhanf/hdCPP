@@ -41,7 +41,19 @@ void RegisterDialog::mouseDoubleClickEvent(QMouseEvent *event){
     qDebug() << event->globalX();
 
 
+/*
 
+  光标定位在输入框并且输入文字的时候
+  覆写  xxxx事件  keyPress{
+      //获取已输入的内容，输入框
+      keyword
+      //执行查询
+      select * from keyTab where key like '%keyword%'
+      //将查询结果回填到输入框对应的下拉菜单
+
+    }
+
+*/
 
 
 }

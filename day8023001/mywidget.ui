@@ -14,22 +14,7 @@
    <string>MyWidget</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel{
-	
-	color: rgb(255, 5, 17);
-	
-	font: 75 24pt &quot;Adobe Devanagari&quot;;
-}
-
-#labelUpass{
-
-	text-decoration: underline;
-	background-color: rgb(0, 170, 0);
-}
-
-
-
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">

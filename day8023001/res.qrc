@@ -1,6 +1,7 @@
 <RCC>
-    <qresource prefix="/img">
+    <qresource prefix="/style">
         <file>resources/new.png</file>
         <file>resources/open.png</file>
+        <file>resources/myStyle.qss</file>
     </qresource>
 </RCC>
